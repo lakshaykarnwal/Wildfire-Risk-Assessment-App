@@ -4,6 +4,14 @@ The Wildfire Detection App is a web application designed to analyze raw infrared
 
 ## Screenshots
 
+<img width="741" alt="Screenshot 2024-08-29 at 2 38 55 PM" src="https://github.com/user-attachments/assets/debd336b-a812-4ce2-9f25-95764b6e89d0">
+
+Select the image you want to analyze
+
+<img width="516" alt="Screenshot 2024-08-29 at 2 41 05 PM" src="https://github.com/user-attachments/assets/a9891b98-5559-4de5-9f6b-ab91fa7d00a9">
+
+The app analyzes the image and shows the output image
+
 ## Features
 
 - **Image Carousel**: View and select images from a carousel to process.
