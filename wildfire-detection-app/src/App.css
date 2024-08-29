@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.carousel-container {
+  max-width: 600px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the carousel */
+}
+
+.carousel-item img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
+  border-radius: 10px;
+}
+
+.carousel-overlay {
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .carousel-overlay {
+  opacity: 1;
+}
+
+.slick-dots {
+  bottom: 10px; /* Position dots just above the bottom of the carousel */
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Space between dots */
+}
+
+.slick-dots li button {
+  background-color: rgba(0, 0, 0, 0.5); /* Background color of the dots */
+  border-radius: 50%; /* Make dots circular */
+  width: 12px; /* Width of the dots */
+  height: 12px; /* Height of the dots */
+}
+
+.slick-dots li.slick-active button {
+  background-color: rgba(0, 0, 0, 0.8); /* Color of the active dot */
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px; /* Size of the arrow icon */
+  color: white; /* Arrow color */
+}
+
+/* Position the arrows */
+.slick-prev {
+  left: 10px; /* Adjust as needed */
+}
+
+.slick-next {
+  right: 10px; /* Adjust as needed */
+}
