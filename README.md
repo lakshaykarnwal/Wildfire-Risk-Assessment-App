@@ -1,4 +1,4 @@
-# Wildfire Detection App 🔥
+# Wildfire Risk Assessment App 🔥
 
 The Wildfire Detection App is a web application designed to analyze raw infrared imagery for detecting potential wildfire hotspots. Using a combination of image processing and machine learning techniques, the app identifies anomalies that could indicate the presence of a fire. The project includes a user-friendly interface to upload and process images and display results in a visually appealing way.
 
