@@ -20,7 +20,7 @@ const App = () => {
   const [anomalies, setAnomalies] = useState(null);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/images')
+    fetch('http://127.0.0.1:5001/images')
       .then(response => response.json())
       .then(data => setImages(data))
       .catch(error => console.error('Error fetching images:', error));
@@ -28,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     if (selectedImage) {
-      fetch('http://127.0.0.1:5000/process_image', {
+      fetch('http://127.0.0.1:5001/process_image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ const App = () => {
           {images.map((image, index) => (
             <div key={index} className="carousel-item relative cursor-pointer" onClick={() => handleImageClick(image)}>
               <img
-                src={`http://127.0.0.1:5000/uploads/${image}`}
+                src={`http://127.0.0.1:5001/uploads/${image}`}
                 alt={`Slide ${index}`}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
               />

@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./wildfire-detection-app
+    ports:
+      - "3000:80"
+  
+  backend:
+    build:
+      context: ./flask-backend
+    ports:
+      - "5001:5000"
+    environment:
+      - FLASK_ENV=development

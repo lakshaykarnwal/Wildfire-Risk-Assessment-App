@@ -11,6 +11,9 @@
 # production
 /wildfire-detection-app/build
 
+#virtual Environment
+/flask-backend/WildfireRiskEnv
+
 # misc
 /.DS_Store
 /.env.local
