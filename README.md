@@ -18,7 +18,7 @@ The app analyzes the image and shows the output image
 - **Anomaly Detection**: Processes selected images to detect anomalies that could indicate wildfires.
 - **Results Display**: Visual representation of detected anomalies alongside the original image.
 - **Responsive UI**: The application is designed to be responsive and user-friendly.
-- **Credits**: Displays credits for the images used in the app.
+- **Docker Support**: The app is fully containerized, making it easy to deploy on any system without manually installing dependencies.
 
 ## Anomaly Detection Algorithm
 
@@ -64,6 +64,7 @@ By following these steps, the application provides users with a visual and intui
 
 ### Other Technologies
 
+- **Docker**: Used to containerize the app, allowing it to run on any system without needing Node.js or Python to be manually installed.
 - **Email.js**: (If applicable) Used for sending emails directly from the app.
 - **REST API**: Utilized to communicate between the frontend and backend services.
 
@@ -71,49 +72,25 @@ By following these steps, the application provides users with a visual and intui
 
 ### Prerequisites
 
-- **Node.js**: Install Node.js and npm from [nodejs.org](https://nodejs.org/).
-- **Python**: Install Python from [python.org](https://www.python.org/).
-- **Flask**: Install Flask using pip:
-
-  ```bash
-  pip install Flask
-  ```
-
-- **React-Slick & Slick-Carousel**: Install these dependencies for the carousel feature:
-
-  ```bash
-  npm install react-slick slick-carousel
-  ```
+- **Docker**: Install Docker from docker.com.
 
 ### Installation
 
-1. **Clone the repository**:
-
-   ```bash
-   git clone https://github.com/yourusername/wildfire-detection-app.git
+1. Clone the repository:
+  ```bash
+   git clone https://github.com/lakshaykarnwal/Wildfire-Risk-Assessment-App.git
    cd wildfire-detection-app
-   ```
+  ```
 
-2. **Install frontend dependencies**:
+2. Build and run the app using Docker:
+  ```bash
+  docker-compose up
+  ```
+This will build the Docker images and start both the frontend and backend containers.
 
-   ```bash
-   npm install
-   ```
-
-3. **Start the React development server**:
-
-   ```bash
-   npm start
-   ```
-
-   This will start the frontend on http://localhost:3000.
-
-4. **Set up the Flask backend**:
-   ```
-   cd backend
-   flask run
-   ```
-   This will start the backend server on http://127.0.0.1:5000.
+3. Access the app:
+Frontend: Open your browser and navigate to http://localhost:3000.
+Backend: The Flask API will be running on http://localhost:5001
 
 ## Usage
 
@@ -121,6 +98,16 @@ By following these steps, the application provides users with a visual and intui
 2. Select an image from the carousel.
 3. Click on the image to process it.
 4. View the results of the anomaly detection.
+
+## Docker Implementation
+
+The Wildfire Detection App is fully containerized using Docker, enabling it to run consistently across different environments. Here’s how Docker is integrated into the project:
+
+- **Dockerfile**: Separate `Dockerfile`s for the React frontend and Flask backend, which define the dependencies and environment setup required to build and run each component.
+- **Docker Compose**: A `docker-compose.yml` file is provided to simplify the process of running both the frontend and backend together. This automatically builds the containers and links them, making the app ready to run with a single command.
+- **Port Configuration**: The frontend runs on port `3000` and the backend on port `5001`, making communication between both services seamless.
+
+This Docker integration allows you to run the application without manually installing Node.js or Python, making it portable and easy to deploy.
 
 ## Credits
 
